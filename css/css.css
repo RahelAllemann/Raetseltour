@@ -1,10 +1,143 @@
-body {
-  width: 80%;
-  margin: 30px auto;
-  background-color: white;
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --radius: 12px;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+.w3-container.w3-card-4 {
+  max-width: 600px;
+  margin: 40px auto !important;
+  padding: 32px !important;
+  border-radius: var(--radius);
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow-lg) !important;
+  border: none !important;
+}
+
+h2 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+  color: var(--text-main);
+}
+
 p {
-  color: black;
-  margin: auto;
-  background-color: white;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+
+.w3-input {
+  border: 2px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+  font-size: 1rem;
+}
+
+.w3-input:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  outline: none;
+}
+
+.w3-button {
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  padding: 12px 24px !important;
+  transition:
+    transform 0.1s,
+    background-color 0.2s !important;
+  text-transform: none !important;
+}
+
+.w3-button:hover {
+  transform: translateY(-1px);
+}
+
+.w3-button:active {
+  transform: translateY(0);
+}
+
+.w3-blue,
+.w3-hover-blue:hover {
+  background-color: var(--primary-color) !important;
+}
+
+.w3-blue:hover {
+  background-color: var(--primary-hover) !important;
+}
+
+.w3-light-grey {
+  background-color: #f1f5f9 !important;
+  color: var(--text-main) !important;
+}
+
+/* Modal Improvements */
+.w3-modal-content {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.w3-modal-content header {
+  padding: 20px !important;
+}
+
+.w3-modal-content .w3-container {
+  padding: 24px !important;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--primary-color) !important;
+}
+
+footer {
+  margin-top: auto;
+  background-color: var(--card-bg) !important;
+  color: var(--text-muted) !important;
+  border-top: 1px solid var(--border-color);
+  padding: 24px !important;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .w3-container.w3-card-4 {
+    margin: 20px 16px !important;
+    padding: 24px !important;
+  }
 }
