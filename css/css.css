@@ -124,8 +124,8 @@ label {
 
 footer {
   margin-top: auto;
-  background-color: var(--card-bg) !important;
-  color: var(--text-muted) !important;
+  background-color: var(--text-muted) !important;
+  color: var(--text-main) !important;
   border-top: 1px solid var(--border-color);
   padding: 24px !important;
 }
