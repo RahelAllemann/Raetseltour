@@ -1,10 +1,10 @@
 body {
   width: 80%;
   margin: 30px auto;
-  background-color: pink;
+  background-color: white;
 }
 p {
-  color: purple;
+  color: black;
   margin: auto;
-  background-color: pink;
+  background-color: white;
 }
